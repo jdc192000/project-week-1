@@ -7,6 +7,8 @@
 
     <!-- Style sheet -->
     <link rel="stylesheet" type="text/css" href="assets/style/style.css">
+    
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -29,22 +31,34 @@
     <!-- DOM goes here -->
     <div class="container">
         <!-- Jumbotron -->
-        <div class="jumbotron text-center">
+        <div class="jumbotron">
             <h1>Wish List!</h1>
-            <p>Welcome to wish list. Here you will be able to set up an account and give your loved one a link to log in and
-                create their own list of gifts they would like to receive. </p>
+            <p>Here are the results of your list. </p>
         </div>
-
-        <h2>Response Data</h2>
-        <div id="monitor_data">
-        </div>
-        <!-- Location for JS to print the data -->
     </div>
 
+    <!-- Clearfix -->
+    <div class="clearfix">
+    </div>
+
+    <hr>
+    <!-- Container for the results of the searches. We can add more if we want a container for each result. -->
+    <div class="container">
+        <div class="Response">
+            <h2>Response Data</h2>
+            <div id="monitor_data">
+
+                <!-- Location for JS to print the data -->
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita dolorum assumenda excepturi quisquam,
+                    nihil officia, quasi non amet, unde vitae earum adipisci reprehenderit nam est iste. Temporibus iste
+                    sunt officia. </p>
+            </div>
+        </div>
 
 
-    <script src="firebase.js"></script>
-    <script src="api.js"></script>
-    <script src="app.js"></script>
+
+        <script src="firebase.js"></script>
+        <script src="api.js"></script>
+        <script src="app.js"></script>
 
 </body>

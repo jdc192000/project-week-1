@@ -10,6 +10,38 @@ var config = {
 
 firebase.initializeApp(config);
 
+// Added Google login !!!!!!!
+
+function login() {
+  function newLoginHappened() {
+    if (user) {
+      app(user);
+    } else {
+      var provider = new firebase.auth.GoogleAuthProvider();
+      firebase.auth().sighnInWithRedirect(provider);
+    }
+  }
+
+  firebase.auth().onAuthStateChanged(newLoginHappened);
+}
+
+function app(user) {
+  // user.displayName
+  // user.email
+  // user.photoURL
+  // user.uid
+  document.getElementById("guest").innerHTML = user.displayName;
+}
+
+window.onload = app;
+
+
+// <body>
+// <h1>Hello <span id="guest"></span></h1>
+// </body/
+
+// End of added google login !!!!!!!!
+
 var wishList = [];
 
 function retrieveWishlist() {
